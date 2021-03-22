@@ -1,0 +1,86 @@
+.kontejner 
+{
+    display: flex;
+   
+}
+
+h2 
+{
+    
+    color: #fd0505;
+    margin: 5px;
+    text-align: center;
+}
+
+.forma 
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    margin: 5px;
+    border: 4px solid black;
+    border-radius: 25px;
+    padding: 5px;
+    color: red;
+    background-color: white;
+    
+}
+
+div 
+{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+select {
+    margin-top: 3px;
+}
+
+body 
+{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 47%, rgba(0,212,255,1) 100%);
+    
+}
+
+.kontejnerFilma
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 500px;
+    /*height: 720px;*/
+    font-size: 20px;
+    
+}
+
+.vrsta
+{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.film
+{
+    border: 2px solid black;
+    border-radius: 20px;
+    flex: 1 1 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+.button
+{
+    margin: 5px;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.7s;
+    margin: 5px;
+}
+.button:hover
+{
+    background-color: red;
+    color: white;
+}
