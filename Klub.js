@@ -62,14 +62,14 @@ export class Klub {
         element.type = "number";
         forma.appendChild(element);
 
-        let tipoviIgre = ["Action", "Thriller", "Crime", "Horror", "Sci-fi"];
+        let tipoviFilma = ["Action", "Thriller", "Crime", "Horror", "Sci-fi"];
         let bojeTipova = ["#96bb7c", "#9de5ff", "#f4ebc1", "#e27802", "#f05454"];
 
         let radioButton = null;
         let opcija = null;
         let rbDiv = null;
 
-        tipoviIgre.forEach((tip, index) => {
+        tipoviFilma.forEach((tip, index) => {
             rbDiv = document.createElement("div");
             rbDiv.className = "radioButtons";
             radioButton = document.createElement("input");
@@ -253,7 +253,7 @@ export class Klub {
                         alert("Ukoliko zelite da izmenite kolicinu na stanju, kliknite na \"Azuriraj kolicinu\" dugme!\nZa ostale izmene izbrisite film iz video kluba i dodajte iznova.");
                     }
                     else {
-                        alert("Greska prilikom dodavanja filma");
+                        alert("Greska prilikom dodavanja filma.");
                     }
                 });
                 
