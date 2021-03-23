@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lazar\\Desktop\\WEBPROJEKAT2\\API\\API.csproj": {}
+    "C:\\Users\\Lazar\\Desktop\\Web\\WebProjekat\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lazar\\Desktop\\WEBPROJEKAT2\\API\\API.csproj": {
+    "C:\\Users\\Lazar\\Desktop\\Web\\WebProjekat\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lazar\\Desktop\\WEBPROJEKAT2\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Lazar\\Desktop\\Web\\WebProjekat\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Lazar\\Desktop\\WEBPROJEKAT2\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Lazar\\Desktop\\Web\\WebProjekat\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Lazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lazar\\Desktop\\WEBPROJEKAT2\\API\\obj\\",
+        "outputPath": "C:\\Users\\Lazar\\Desktop\\Web\\WebProjekat\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

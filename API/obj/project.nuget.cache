@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KBVw8EoPTr8xPPl87cw6j9VlsrY2wgfAjQh0qAH1oA7UL/+s2vxRW0cjBZzxy3jSPKeOHaNmJLXAQenyWvEdmw==",
+  "dgSpecHash": "vxwSjuVlIm2OkVqrxnuarGnp/9+3+/IVD2U4cZu9+1pMJ0c0FR8HWYI58f4dmQ2k8k/XjJW8lZRQxA3J5mXBFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lazar\\Desktop\\WEBPROJEKAT2\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Lazar\\Desktop\\Web\\WebProjekat\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lazar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lazar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

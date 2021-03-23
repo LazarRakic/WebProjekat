@@ -23,6 +23,6 @@ namespace API.Models
         
         public virtual List<Film> Filmovi { get; set; }
 
-        //public virtual List<Studio> Studios { get; set; }
+        
     }
 }
