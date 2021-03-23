@@ -19,23 +19,23 @@ namespace API.Controllers
             Context = context;
         }
 
-        //R(ead) za katalog
+        //Read
         [Route("PreuzimanjeKlubova")]
         [HttpGet]
-        public async Task<List<Klub>> PreuzmanjeKataloga()
+        public async Task<List<Klub>> PreuzmanjeKlubova()
         {
             return await Context.Klubovi.Include(p => p.Filmovi).ToListAsync();
         }
 
-        //C(reate) za video igru
+        //Create
         [Route("DodavanjeFilma/{idKluba}")]
         [HttpPost]
-        public async Task<IActionResult> UpisivanjeVideoIgre(int idKluba, [FromBody] Film film)
+        public async Task<IActionResult> UpisiFilm(int idKluba, [FromBody] Film film)
         {
-            var katalog = await Context.Klubovi.FindAsync(idKluba);
-            var studio = await Context.Producenti.FindAsync(film.ProducentID);
+            var videoklub = await Context.Klubovi.FindAsync(idKluba);
+            var producent = await Context.Producenti.FindAsync(film.ProducentID);
 
-            film.Klub = katalog;
+            film.Klub = videoklub;
 
             if (Context.Filmovi.Any(temp => temp.Naziv == film.Naziv && temp.Tip == film.Tip && (temp.X != film.X || temp.Y != film.Y)))
             {
@@ -54,7 +54,7 @@ namespace API.Controllers
             }
             else
             {
-                studio.BrojFilmovaNaStanju++;
+                producent.BrojFilmovaNaStanju++;
                 Context.Filmovi.Add(film);
                 await Context.SaveChangesAsync();
                 return Ok();
@@ -62,7 +62,7 @@ namespace API.Controllers
 
         }
 
-        //U(pdate) za video igru
+        //Update
         [Route("UpdateKolicine")]
         [HttpPut]
         public async Task AzuriranjeKolicine([FromBody] Film film)
@@ -75,17 +75,17 @@ namespace API.Controllers
             
         }
 
-        //D(elete) za video igru
+        //Delete
         [Route("BrisanjeFilma")]
         [HttpDelete]
-        public async Task<IActionResult> BrisanjeVideoIgre([FromBody] Film film)
+        public async Task<IActionResult> BrisanjeFilma([FromBody] Film film)
         {
             var temp =  Context.Filmovi.Where(p => p.X == film.X && p.Y == film.Y).FirstOrDefault();
-            var studio = await Context.Producenti.FindAsync(film.ProducentID);
+            var producent = await Context.Producenti.FindAsync(film.ProducentID);
 
             if (temp != null )
             {
-                studio.BrojFilmovaNaStanju--;
+                producent.BrojFilmovaNaStanju--;
                 Context.Remove<Film>(temp);
                 await Context.SaveChangesAsync();
                 return Ok();
@@ -94,7 +94,7 @@ namespace API.Controllers
                 return StatusCode(406);
         }
 
-        //R(ead) za studio
+        //Read producent
         [Route("PreuzimanjeProducenta")]
         [HttpGet]
         public async Task<List<Producent>> PreuzimanjeProducenta()
